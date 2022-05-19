@@ -19,3 +19,7 @@ exports.getPdfFile = async (filename, base64) => {
   console.log(fileUrl);
   return fileUrl;
 };
+
+exports.randomFileName = (str) => {
+  return fileService.randomFilename(str ?? 'file');
+}

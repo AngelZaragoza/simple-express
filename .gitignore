@@ -43,4 +43,5 @@ Thumbs.db
 
 # Other files
 /backend/images/*
+/public/pdfs/*
 .env

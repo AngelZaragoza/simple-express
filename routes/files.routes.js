@@ -19,4 +19,12 @@ router.post("/pdf", async function (req, res, next) {
   }
 });
 
+/* GET string prepend to a random value to generate a filename */
+router.get("/random", (req, res, next) => {
+  const { prepend } = req.query;
+  console.log("Query:", prepend);
+  const randomName = fileController.randomFileName(prepend);
+  res.status(200).json({ randomName });
+});
+
 module.exports = router;
